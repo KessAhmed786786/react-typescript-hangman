@@ -11,9 +11,31 @@ function App() {
   // Create state to track letters guessed
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
-  console.log(wordToGuess);
-  return <h1>{wordToGuess}</h1>;
-  return <h1>{guessedLetters}</h1>;
+  return (
+    <div // Overall element styling for entire program
+      style={{
+        maxWidth: "800px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "2rem",
+        margin: "0 auto",
+        alignItems: "center",
+      }}
+    >
+      <div // Styling for text: win and lose
+        style={{
+          fontSize: "2rem",
+          fontFamily: "arial",
+          textAlign: "center",
+        }}
+      >
+        Lose Win
+      </div>
+      <HangmanDrawing />
+      <HangmanWord />
+      <GuessingKeyboard />
+    </div>
+  );
 }
 
 export default App;
