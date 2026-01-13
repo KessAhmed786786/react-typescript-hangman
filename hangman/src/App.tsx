@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { HangmanDrawing } from "./HangmanDrawing";
+import { HangmanWord } from "./HangmanWord";
+import { GuessingKeyboard } from "./GuessingKeyboard";
 import words from "./wordList.json";
 
 function App() {
